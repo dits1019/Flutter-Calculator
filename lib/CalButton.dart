@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CalButton extends StatelessWidget {
   final color; //버튼 색깔
   final textColor; //텍스트 색깔
-  final String buttonText; //버튼 텍스트
+  final String? buttonText; //버튼 텍스트
   final buttonAction; //버튼 액션
 
   const CalButton(
@@ -21,7 +21,7 @@ class CalButton extends StatelessWidget {
             color: color,
             child: Center(
               child: Text(
-                buttonText,
+                buttonText!,
                 style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.bold,

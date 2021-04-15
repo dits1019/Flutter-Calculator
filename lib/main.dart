@@ -161,13 +161,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void equalsAction() {
+    //곱하기 표시인 x를 *로 바꿀  때 보여주는 텍스트는 기호가 바뀌지 않게 하기 위해
     String userQuestion = question;
     userQuestion = userQuestion.replaceAll('x', '*');
 
     Parser p = Parser();
     Expression exp = p.parse(userQuestion);
     ContextModel cm = ContextModel();
-    double eval = exp.evaluate(EvaluationType.REAL, cm);
+    double? eval = exp.evaluate(EvaluationType.REAL, cm);
 
     answer = eval.toString();
   }
